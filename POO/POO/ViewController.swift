@@ -22,6 +22,7 @@ class ViewController: UIViewController
         //View already rendered on RAM
         super.viewDidLoad()
         labelTitle.text = "Super Car Factory"
+        print("viewDidLoad has been activated")
         
     }
     //Connection: Action, name: camelCase, Type: UIButton, Event: Touch Up Inside, Arguments: Sender
@@ -85,5 +86,35 @@ class ViewController: UIViewController
         }
     }
     
+    //Functions of the viewController cicle
+    override func loadView()
+    {
+        super.loadView()
+        print("loadView has been activated")
+    }
+    override func viewWillAppear(_ animated: Bool)
+    {
+        super.viewWillAppear(true)
+        print("viewWillAppear has been activated")
+    }
+    override func viewDidAppear(_ animated: Bool)
+    {
+        super.viewDidAppear(true)
+        print("viewDidAppear has been activated")
+    }
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(true)
+        print("viewWillDisappear has been activated")
+    }
+    override func viewDidDisappear(_ animated: Bool)
+    {
+        super.viewDidDisappear(true)
+        print("viewDidDisappear has been activated")
+    }
+    override func didReceiveMemoryWarning()
+     {
+        super.didReceiveMemoryWarning()
+        print("didReceiveMemoryWarning has been activated")
+    }
 }
 
