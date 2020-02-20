@@ -8,45 +8,34 @@
 
 import UIKit
 
-class ViewController: UIViewController {
-
+class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource
+{
+    //var contentCell:[String] = ["Marco","Diana","Luis","Danny"]
+    var contentCell:[String] = ["De10Lite","Practica09","Practica10"]
+    @IBOutlet var table: UITableView!
     override func viewDidLoad()
     {
         super.viewDidLoad()
-        print("viewDidLoad has been activated in screen 1")
+        table.dataSource = self
+        table.delegate = self
+        
         // Do any additional setup after loading the view.
     }
-    //Functions of the viewController cicle
-    override func loadView()
-    {
-        super.loadView()
-        print("loadView has been activated in screen 1")
-    }
-    override func viewWillAppear(_ animated: Bool)
-    {
-        super.viewWillAppear(true)
-        print("viewWillAppear has been activated in screen 1")
-    }
-    override func viewDidAppear(_ animated: Bool)
-    {
-        super.viewDidAppear(true)
-        print("viewDidAppear has been activated in screen 1")
-    }
-    override func viewWillDisappear(_ animated: Bool) {
-        super.viewWillDisappear(true)
-        print("viewWillDisappear has been activated in screen 1")
-    }
-    override func viewDidDisappear(_ animated: Bool)
-    {
-        super.viewDidDisappear(true)
-        print("viewDidDisappear has been activated in screen 1")
-    }
-    override func didReceiveMemoryWarning()
-     {
-        super.didReceiveMemoryWarning()
-        print("didReceiveMemoryWarning has been activated in screen 1")
-    }
 
-
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return contentCell.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell
+    {
+        print("\(indexPath.section)")
+        let cell:UITableViewCell = UITableViewCell(style:UITableViewCell.CellStyle.default, reuseIdentifier: "Cell")
+        cell.textLabel?.text = contentCell[indexPath.row]
+        return cell
+    }
+    //_ Argument labels, skip argument name
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        print("I'm pressing \(indexPath.row) file")
+    }
 }
 

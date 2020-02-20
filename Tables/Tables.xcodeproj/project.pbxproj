@@ -14,6 +14,7 @@
 		25280E8C23FBAC1C00C2353E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 25280E8B23FBAC1C00C2353E /* Assets.xcassets */; };
 		25280E8F23FBAC1C00C2353E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 25280E8D23FBAC1C00C2353E /* LaunchScreen.storyboard */; };
 		25280E9723FBB9A500C2353E /* ViewController2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25280E9623FBB9A500C2353E /* ViewController2.swift */; };
+		25EA43D723FE490B0004F4AE /* PDF in Resources */ = {isa = PBXBuildFile; fileRef = 25EA43D623FE490B0004F4AE /* PDF */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,6 +28,7 @@
 		25280E9023FBAC1C00C2353E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		25280E9623FBB9A500C2353E /* ViewController2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController2.swift; sourceTree = "<group>"; };
 		25280E9823FBBE4600C2353E /* ProtocolsDelegated.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = ProtocolsDelegated.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
+		25EA43D623FE490B0004F4AE /* PDF */ = {isa = PBXFileReference; lastKnownFileType = folder; path = PDF; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,7 +61,6 @@
 		25280E8123FBAC1000C2353E /* Tables */ = {
 			isa = PBXGroup;
 			children = (
-				25280E9823FBBE4600C2353E /* ProtocolsDelegated.playground */,
 				25280E8223FBAC1000C2353E /* AppDelegate.swift */,
 				25280E8423FBAC1000C2353E /* SceneDelegate.swift */,
 				25280E8623FBAC1000C2353E /* ViewController.swift */,
@@ -68,6 +69,8 @@
 				25280E8B23FBAC1C00C2353E /* Assets.xcassets */,
 				25280E8D23FBAC1C00C2353E /* LaunchScreen.storyboard */,
 				25280E9023FBAC1C00C2353E /* Info.plist */,
+				25EA43D623FE490B0004F4AE /* PDF */,
+				25280E9823FBBE4600C2353E /* ProtocolsDelegated.playground */,
 			);
 			path = Tables;
 			sourceTree = "<group>";
@@ -131,6 +134,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				25280E8F23FBAC1C00C2353E /* LaunchScreen.storyboard in Resources */,
+				25EA43D723FE490B0004F4AE /* PDF in Resources */,
 				25280E8C23FBAC1C00C2353E /* Assets.xcassets in Resources */,
 				25280E8A23FBAC1000C2353E /* Main.storyboard in Resources */,
 			);

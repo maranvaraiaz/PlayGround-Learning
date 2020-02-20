@@ -6,7 +6,7 @@ protocol basicOperations
     func Sub(a:Int,b:Int)
 }
 
-class Computer:Calculator
+class Computer
 {
     let cpu:String = "I5"
 }
