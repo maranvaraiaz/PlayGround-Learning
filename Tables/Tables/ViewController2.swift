@@ -7,14 +7,41 @@
 //
 
 import UIKit
+import WebKit
 
 class ViewController2: UIViewController {
 
+    
+    @IBOutlet var webView: WKWebView!
+    
+    var namePdfReceived:String?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        print("viewDidLoad has been activated in screen 2")
+        enableZoom()
+        showPDF()
+        /*print("viewDidLoad has been activated in screen 2")
+        labelTitle.text = namePdfReceived!
+         */
         // Do any additional setup after loading the view.
     }
+    func showPDF()
+    {
+        //1: Create url object
+        let address:URL = URL(fileURLWithPath: Bundle.main.path(forResource: namePdfReceived!, ofType: "pdf", inDirectory: "PDF")!)
+        print(address)
+        //2: Transform file to Data
+        let dataPDF:Data = try! Data(contentsOf: address)
+        
+        //3: Show Data in webView
+        
+        webView.load(dataPDF, mimeType: "application/pdf", characterEncodingName: "utf-8", baseURL: address)
+    }
+    func enableZoom()
+    {
+        webView.scalesLargeContentImage = true
+    }
+    /*
     //Functions of the viewController cicle
     override func loadView()
     {
@@ -45,7 +72,7 @@ class ViewController2: UIViewController {
         super.didReceiveMemoryWarning()
         print("didReceiveMemoryWarning has been activated in screen 2")
     }
-
+     */
     /*
     // MARK: - Navigation
 

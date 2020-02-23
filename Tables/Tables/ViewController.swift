@@ -36,6 +36,17 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     //_ Argument labels, skip argument name
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         print("I'm pressing \(indexPath.row) file")
+        let idPDF = indexPath.row
+        self.performSegue(withIdentifier: "2ScreenSegue", sender: idPDF)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "2ScreenSegue"
+        {
+            let idPDFReceived = sender as! Int
+            let objScreen2:ViewController2 = segue.destination as! ViewController2
+            objScreen2.namePdfReceived = contentCell[idPDFReceived]
+        }
     }
 }
 
