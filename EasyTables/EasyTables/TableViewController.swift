@@ -35,6 +35,16 @@ class TableViewController: UITableViewController {
         return cell
     }
     
+    override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
+        return true
+    }
+    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+        if editingStyle == .delete
+        {
+            arrayNumber.remove(at: indexPath.row)
+            tableView.reloadData()
+        }
+    }
 
     /*
     // Override to support conditional editing of the table view.
